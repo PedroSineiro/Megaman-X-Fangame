@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://be3r8ojvw8ria"]
+
+[ext_resource type="PackedScene" uid="uid://yc7fxfr2p56c" path="res://player.tscn" id="1_tris7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcd2o"]
+size = Vector2(994, 449)
+
+[node name="Main" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(521, 500)
+shape = SubResource("RectangleShape2D_jcd2o")
+
+[node name="Panel" type="Panel" parent="StaticBody2D"]
+offset_left = 27.0
+offset_top = 276.0
+offset_right = 1024.0
+offset_bottom = 725.0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1406, 562)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(112, 119)
+shape = SubResource("RectangleShape2D_jcd2o")
+
+[node name="Panel" type="Panel" parent="StaticBody2D2"]
+offset_left = -376.0
+offset_top = -109.0
+offset_right = 621.0
+offset_bottom = 340.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_tris7")]
+position = Vector2(295, 231)
