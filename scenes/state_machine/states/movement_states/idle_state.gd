@@ -18,7 +18,7 @@ func process_input(_event: InputEvent) -> State:
 		return jump_state
 	if state_input.get_movement_direction() != 0.0:
 		return move_state
-	if state_input.get_dash_input():
+	if state_input.get_start_dash_input():
 		print("dash")
 		return dash_state
 	return null

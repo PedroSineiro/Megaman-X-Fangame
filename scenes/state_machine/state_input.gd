@@ -13,6 +13,10 @@ func get_jump_input() -> bool: #bool
 	push_error("UNIMPLEMENTED ERROR: StateInput.get_jump_input")
 	return false
 
+func get_start_dash_input() -> bool:
+	push_error("UNIMPLEMENTED ERROR: StateInput.get_start_dash_input")
+	return false
+
 func get_dash_input() -> bool:
 	push_error("UNIMPLEMENTED ERROR: StateInput.get_dash_input")
 	return false

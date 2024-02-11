@@ -10,8 +10,11 @@ func get_movement_direction() -> float:
 func get_jump_input() -> bool:
 	return Input.is_action_just_pressed('jump')
 
-func get_dash_input() -> bool:
+func get_start_dash_input() -> bool:
 	return Input.is_action_just_pressed("dash")
+
+func get_dash_input() -> bool:
+	return Input.is_action_pressed("dash")
 
 func get_shoot_input() -> bool:
 	return Input.is_action_just_pressed("shoot")

@@ -10,7 +10,7 @@ var idle_state: State
 var jump_state: State
 
 func process_input(_event: InputEvent) -> State:
-	if state_input.get_dash_input():
+	if state_input.get_start_dash_input():
 		print("dash")
 		return dash_state
 	
@@ -22,7 +22,7 @@ func process_physics(delta: float) -> State:
 
 	parent.velocity.y += gravity * delta
 
-	var movement = state_input.get_movement_direction() * move_speed
+	var movement = state_input.get_movement_direction() * parent.move_speed
 	
 	if movement == 0:
 		return idle_state

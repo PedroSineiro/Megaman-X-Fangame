@@ -3,18 +3,16 @@ extends Node
 
 @export
 var animation_name: String
-@export
-var move_speed: float = 150
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var sprite: AnimatedSprite2D
 var state_input: StateInput
-var parent: CharacterBody2D
+var parent: Player
 var animator: AnimationPlayer
+	
 
 func enter() -> void:
-	#sprite.play(animation_name)
 	animator.play(animation_name)
 
 func exit() -> void:

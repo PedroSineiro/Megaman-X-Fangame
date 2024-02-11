@@ -1,6 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
+@export
+var move_speed: float = 150
+
 @onready
 var sprite: AnimatedSprite2D = $PlayerAnimations
 #@onready
